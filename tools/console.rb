@@ -47,7 +47,7 @@ fang.zoo = philly
 ###################
 # Origin Tests (11)
 origin_test_1 = air.country  # Should be "Southern Air Temple"
-origin_test_2 = earth.continent  # Should be "Asia"
+origin_test_2 = earth.continent  # Should be "North America"
 origin_test_3 = Origin.all  # Should be [air object, earth object, fire object]
 origin_test_4 = air.animals  #Should return [Appa object, Momo object]
 origin_test_5 = fire.animals #Should return just [Fang object]

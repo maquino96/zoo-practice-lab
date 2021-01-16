@@ -49,7 +49,7 @@ class Origin
         # origin_most_animals
 
         origin_numbers = self.all.map{|origin| origin.animal_number}
-        self.all.select{|origin| origin.animal_number == origin_numbers.max}.uniq
+        self.all.find{|origin| origin.animal_number == origin_numbers.max}
     end    
 
 end

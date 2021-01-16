@@ -119,7 +119,7 @@ describe "Origin" do
     describe ".most_animals" do
         it "return an instance of an origin that in general has the most animals" do
             air = Origin.new("Asia","Southern Air Temple")
-            earth = Origin.new("North America", "Earth Kingdom")
+            sokka = Origin.new("North America", "Earth Kingdom")
             fire = Origin.new("Asia", "Fire Nation")
             appa = Animal.new("Sky Bison", "Appa")
             ffcp = Animal.new("Moose Lion", "Foo Foo Cuddly Poops")
@@ -128,12 +128,12 @@ describe "Origin" do
             bosco = Animal.new("Just a Bear", "Bosco")
             nyla = Animal.new("Shirshu", "Nyla")
             appa.origin = air
-            ffcp.origin = earth
+            ffcp.origin = sokka
             momo.origin = air
             fang.origin = fire
-            bosco.origin = earth
-            nyla.origin = earth
-            expect(Origin.most_animals).to eq(earth)
+            bosco.origin = sokka
+            nyla.origin = sokka
+            expect(Origin.most_animals).to eq(sokka)
         end
     end
     
