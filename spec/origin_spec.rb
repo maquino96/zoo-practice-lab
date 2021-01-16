@@ -65,6 +65,7 @@ describe "Origin" do
             appa = Animal.new("Sky Bison", "Appa")
             momo = Animal.new("Flying Lemur","Momo")
             oogi = Animal.new("Sky Bison","Oogi")
+            bss = Zoo.new("The Ba Sing Se Zoo", "Ba Sing Se, Earth Kingdom")
             appa.origin = air
             momo.origin = air
             oogi.origin = air

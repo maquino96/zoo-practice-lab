@@ -5,7 +5,7 @@ class Zoo
     attr_accessor :name
     attr_reader :address
 
-    def intiialize (name, address)
+    def initialize(name, address)
         @name = name
         @address = address
     end 
