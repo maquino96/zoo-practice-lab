@@ -1,6 +1,5 @@
 class Animal
-
-    #The species and origin of the animal should not change.
+   #The species and origin of the animal should not change.
     #The name and zoo of the animal should be able to change.
     #Instructions say we need to be able to create an array with all of the instances
     attr_reader :species, :origin
@@ -20,5 +19,5 @@ class Animal
     def self.all
         @@all
     end
-
+ 
 end
