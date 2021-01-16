@@ -15,7 +15,7 @@ class Zoo
     end 
 
     def all_animal_species
-        Animals.all.map{&:species}.uniq
+        Animals.all.map(&:species).uniq
     end 
 
     def zoo_origins
