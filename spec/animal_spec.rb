@@ -40,7 +40,7 @@ describe "Animal" do
     end
   end
 
-  describe "#opecies" do
+  describe "#species" do
     it "returns the species of this animal" do
         ffcp = Animal.new("Moose Lion", "Foo Foo Cuddly Poops")
         expect(ffcp.species).to eq("Moose Lion")
