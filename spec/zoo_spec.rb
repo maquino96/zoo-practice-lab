@@ -18,6 +18,9 @@ describe "Zoo" do
 
   describe "#name" do
     it "returns the name of this zoo instance" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         bss = Zoo.new("The Ba Sing Se Zoo", "Ba Sing Se, Earth Kingdom")
         expect(bss.name).to eq("The Ba Sing Se Zoo")
     end
@@ -25,6 +28,9 @@ describe "Zoo" do
 
   describe "#address" do
     it "returns the address of this zoo instance" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         bronx = Zoo.new("The Bronx Zoo","Bronx, NY, USA, Real Life")
         expect(bronx.address).to eq("Bronx, NY, USA, Real Life")
     end
@@ -32,6 +38,9 @@ describe "Zoo" do
 
   describe "#all_animals" do
     it "returns an array of all the animals in this zoo" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         bronx = Zoo.new("The Bronx Zoo","Bronx, NY, USA, Real Life")
         bosco = Animal.new("Just a Bear", "Bosco")
         nyla = Animal.new("Shirshu", "Nyla")
@@ -41,6 +50,9 @@ describe "Zoo" do
         expect(bronx.all_animals).to include(nyla)
     end
     it "returns an array of all the animals in this zoo" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         philly = Zoo.new("The Philadelphia Zoo", "Philadelphia, PA, USA, Real Life")
         fang = Animal.new("Dragon","Fang")
         fang.zoo = philly
@@ -50,6 +62,9 @@ describe "Zoo" do
 
   describe "#all_animal_species" do
     it "returns an array of the unique animal species in this zoo instance" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         bss = Zoo.new("The Ba Sing Se Zoo", "Ba Sing Se, Earth Kingdom")
         appa = Animal.new("Sky Bison", "Appa")
         momo = Animal.new("Flying Lemur","Momo")
@@ -65,6 +80,9 @@ describe "Zoo" do
 
   describe "#origins" do
     it "returns an array of all the unique origins of animals in this zoo" do 
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         air = Origin.new("Asia","Southern Air Temple")
         earth = Origin.new("North America", "Earth Kingdom")
         fire = Origin.new("Asia", "Fire Nation")
@@ -78,6 +96,9 @@ describe "Zoo" do
         expect(bronx.origins).to eq([earth])
     end
     it "returns an array of all the unique origins of animals in this zoo" do 
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         air = Origin.new("Asia","Southern Air Temple")
         earth = Origin.new("North America", "Earth Kingdom")
         fire = Origin.new("Asia", "Fire Nation")
@@ -96,6 +117,9 @@ describe "Zoo" do
         expect(bss.origins.length).to eq(2)
     end
     it "returns an array of all the unique origins of animals in this zoo" do 
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         air = Origin.new("Asia","Southern Air Temple")
         earth = Origin.new("North America", "Earth Kingdom")
         fire = Origin.new("Asia", "Fire Nation")
@@ -109,6 +133,9 @@ describe "Zoo" do
 
   describe ".all" do
     it "returns an array of all the zoo instances" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         bss = Zoo.new("The Ba Sing Se Zoo", "Ba Sing Se, Earth Kingdom")
         bronx = Zoo.new("The Bronx Zoo","Bronx, NY, USA, Real Life")
         philly = Zoo.new("The Philadelphia Zoo", "Philadelphia, PA, USA, Real Life")
@@ -120,12 +147,18 @@ describe "Zoo" do
 
     describe ".find_by_name" do
         it "takes in a zoo name argument and returns the zoo instance" do 
+            Origin.clear
+            Animal.clear
+            Zoo.clear
             bss = Zoo.new("The Ba Sing Se Zoo", "Ba Sing Se, Earth Kingdom")
             bronx = Zoo.new("The Bronx Zoo","Bronx, NY, USA, Real Life")
             philly = Zoo.new("The Philadelphia Zoo", "Philadelphia, PA, USA, Real Life")
             expect(Zoo.find_by_name("The Ba Sing Se Zoo")).to eq(bss)
         end
         it "takes in a zoo name argument and returns the zoo instance" do 
+            Origin.clear
+            Animal.clear
+            Zoo.clear
             bss = Zoo.new("The Ba Sing Se Zoo", "Ba Sing Se, Earth Kingdom")
             bronx = Zoo.new("The Bronx Zoo","Bronx, NY, USA, Real Life")
             philly = Zoo.new("The Philadelphia Zoo", "Philadelphia, PA, USA, Real Life")

@@ -15,6 +15,10 @@ class Zoo
         @@all
     end 
 
+    def self.clear
+        @@all = []
+    end
+
     def all_animals
         Animal.all.select{|animal| animal.zoo ==self}
     end

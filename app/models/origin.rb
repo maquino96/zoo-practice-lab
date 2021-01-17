@@ -11,6 +11,10 @@ class Origin
     def self.all
         @@all
     end
+
+    def self.clear
+        @@all = []
+    end
     
     def animals
         Animal.all.select{ |animal| animal.origin == self }

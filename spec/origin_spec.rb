@@ -10,6 +10,9 @@ describe "Origin" do
 
   describe "#country" do
     it "returns the country for this origin instance" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         air = Origin.new("Asia","Southern Air Temple")
         expect(air.country).to eq("Southern Air Temple")
     end
@@ -17,6 +20,9 @@ describe "Origin" do
 
   describe "#continent" do
     it "returns the continent for this origin instance" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         earth = Origin.new("North America", "Earth Kingdom")
         expect(earth.continent).to eq("North America")
     end
@@ -24,6 +30,9 @@ describe "Origin" do
 
    describe "#animals" do
     it "returns all the animals that this instance of an origin has" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         air = Origin.new("Asia","Southern Air Temple")
         appa = Animal.new("Sky Bison", "Appa")
         momo = Animal.new("Flying Lemur","Momo")
@@ -36,6 +45,9 @@ describe "Origin" do
         expect(air.animals).to include(oogi)
     end
     it "returns all the animals that this instance of an origin has" do
+        Origin.clear
+        Animal.clear
+        Zoo.clear
         fire = Origin.new("Asia", "Fire Nation")
         fang = Animal.new("Dragon","Fang")
         fang.origin = fire
@@ -45,6 +57,9 @@ describe "Origin" do
 
     describe "#zoos" do
         it "returns all the zoos that hold animals of this origin" do
+            Origin.clear
+            Animal.clear
+            Zoo.clear
             earth = Origin.new("North America", "Earth Kingdom")
             ffcp = Animal.new("Moose Lion", "Foo Foo Cuddly Poops")
             bosco = Animal.new("Just a Bear", "Bosco")
@@ -61,6 +76,9 @@ describe "Origin" do
             expect(earth.zoos).to include(bronx)
         end
         it "returns all the zoos that hold animals of this origin" do
+            Origin.clear
+            Animal.clear
+            Zoo.clear
             air = Origin.new("Asia","Southern Air Temple")
             appa = Animal.new("Sky Bison", "Appa")
             momo = Animal.new("Flying Lemur","Momo")
@@ -78,12 +96,18 @@ describe "Origin" do
 
     describe "#animal_number" do
             it "returns an integer that indicates the number of different animal instances this origin has in total" do
+                Origin.clear
+                Animal.clear
+                Zoo.clear
                 fire = Origin.new("Asia", "Fire Nation")
                 fang = Animal.new("Dragon","Fang")
                 fang.origin = fire
                 expect(fire.animal_number).to eq(1)
             end
             it "returns an integer that indicates the number of different animal instances this origin has in total" do
+                Origin.clear
+                Animal.clear
+                Zoo.clear
                 earth = Origin.new("North America", "Earth Kingdom")
                 ffcp = Animal.new("Moose Lion", "Foo Foo Cuddly Poops")
                 bosco = Animal.new("Just a Bear", "Bosco")
@@ -97,6 +121,9 @@ describe "Origin" do
 
     describe ".all" do
         it "returns an array of all the origin instances" do
+            Origin.clear
+            Animal.clear
+            Zoo.clear
             air = Origin.new("Asia","Southern Air Temple")
             earth = Origin.new("North America", "Earth Kingdom")
             fire = Origin.new("Asia", "Fire Nation")
@@ -108,6 +135,9 @@ describe "Origin" do
 
     describe ".find_by_continent" do
         it "takes in a string of a continent as an argument and returns an array of all the countries within that continent" do
+            Origin.clear
+            Animal.clear
+            Zoo.clear
             air = Origin.new("Asia","Southern Air Temple")
             earth = Origin.new("North America", "Earth Kingdom")
             fire = Origin.new("Asia", "Fire Nation")
@@ -118,6 +148,9 @@ describe "Origin" do
 
     describe ".most_animals" do
         it "return an instance of an origin that in general has the most animals" do
+            Origin.clear
+            Animal.clear
+            Zoo.clear
             air = Origin.new("Asia","Southern Air Temple")
             sokka = Origin.new("North America", "Earth Kingdom")
             fire = Origin.new("Asia", "Fire Nation")
