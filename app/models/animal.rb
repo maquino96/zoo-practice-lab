@@ -10,8 +10,6 @@ class Animal
     #When calling the species you should also get their zoo and origin
     def initialize(species, name)
         @species = species
-        @zoo = zoo
-        @origin = origin
         @name = name
         @@all << self
     end

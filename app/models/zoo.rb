@@ -24,17 +24,15 @@ class Zoo
     end
 
     def all_animal_species
-        self.all_animals.map(&:species).uniq
+        all_animals.map(&:species).uniq
     end 
 
     def origins
-        self.all_animals.map(&:origin).uniq
-        #Animal.all.select{|el| el.origin}.uniq
+        all_animals.map(&:origin).uniq
     end 
 
     def self.find_by_name(zoo_name)
-        self.all.find{|el| el.name == zoo_name }
+        self.all.find{|zoo| zoo.name == zoo_name }
     end 
-
 
 end

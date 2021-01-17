@@ -80,14 +80,14 @@ oogi = Animal.new("Sky Bison","Oogi")
 oogi.origin = air
 oogi.zoo = bss
 ### needed one more animal of duplicate species ^
-zoo_test_6 = bss.all_animal_species #Should return ["Sky Bison","Flying Lemur"]; should NOT have duplicate Sky Bison
+zoo_test_6 = bss.all_animal_species #Should return ["Sky Bison","Flying Lemur", "Moose Lion"]; should NOT have duplicate Sky Bison
 zoo_test_7 = Zoo.find_by_name("The Ba Sing Se Zoo") #Should return the Ba Sing Se Zoo object
 zoo_test_8 = Zoo.find_by_name("The Philadelphia Zoo") #Should return the Philly zoo object
 zoo_test_9 = bronx.origins #Should return just [earth object]
 zoo_test_10 = bss.origins #Should return [air object, earth object]
 zoo_test_11 = philly.origins #Should return [fire object]
 ###################
-## If all 11 tests return the expected values, we should be ** g o l d e n **
+## If all 31 tests return the expected values, we should be ** g o l d e n **
 ## We can just type the name of the test variable while in binding.pry to see if it matches as expected.
 binding.pry
 0

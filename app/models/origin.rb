@@ -21,7 +21,7 @@ class Origin
     end    
 
     def zoos
-        self.animals.map{|animal| animal.zoo}.uniq
+        animals.map{|animal| animal.zoo}.uniq
     end    
 
     def animal_number
@@ -34,7 +34,6 @@ class Origin
             if origin.continent == continent_string
                 countries.push(origin.country)
             end
-
         end
         countries
     end    
