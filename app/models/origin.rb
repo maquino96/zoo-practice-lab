@@ -29,13 +29,15 @@ class Origin
     end   
     
     def self.find_by_continent(continent_string)
-        countries = []
-        Origin.all.each do |origin|
-            if origin.continent == continent_string
-                countries.push(origin.country)
-            end
-        end
-        countries
+        all.map{|origin| origin.country unless origin.continent != continent_string}
+        
+        # countries = []
+        # Origin.all.each do |origin|
+        #     if origin.continent == continent_string
+        #         countries.push(origin.country)
+        #     end
+        # end
+        # countries
     end    
 
     def self.most_animals
