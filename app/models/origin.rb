@@ -41,6 +41,8 @@ class Origin
     end    
 
     def self.most_animals
+        # all.max{|orig1, orig2| orig1.animal_number <=> orig2.animal_number } #this is a refactor of below
+        
         origin_numbers = self.all.map{|origin| origin.animal_number}
         self.all.find{|origin| origin.animal_number == origin_numbers.max}
     end    
